@@ -22,16 +22,12 @@ export default function FilterBtn(){
                 >All</button>
                 <button 
                     className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === 'bug' ? activeStyle() : ''}`}
-                    onClick={()=> setIsFilter('bug')}
-                >Bug</button>
+                    onClick={()=> setIsFilter(true)}
+                >Open</button>
                 <button 
                     className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === 'doc' ? activeStyle() : ''}`} 
-                    onClick={()=> setIsFilter('doc')}
-                >Doc</button>
-                <button 
-                    className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === 'feat' ? activeStyle() : ''}`} 
-                    onClick={()=> setIsFilter('feat')}
-                >Feature</button>
+                    onClick={()=> setIsFilter(false)}
+                >Closed</button>
         </section>
     )
 }

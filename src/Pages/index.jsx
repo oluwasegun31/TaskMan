@@ -1,4 +1,5 @@
 import CreateTask from "./CreateTask";
 import Home from "./Home";
+import TaskDetails from "./TaskDetails";
 
-export {CreateTask, Home}
+export {CreateTask, Home, TaskDetails}

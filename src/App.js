@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { RootLayout } from './Layouts';
-import { CreateTask, Home } from './Pages';
+import { CreateTask, Home, TaskDetails } from './Pages';
 import { createAction } from './Components';
 function App() {
   const router = createBrowserRouter(
@@ -11,10 +11,16 @@ function App() {
           index
           element={<Home />}
         />
+
         <Route
           path='create'
           element={<CreateTask />}
           action={createAction}
+        />
+
+        <Route
+          path='details/:labelpos'
+          element={<TaskDetails />}
         />
       </Route>
     )

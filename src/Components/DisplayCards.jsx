@@ -6,6 +6,7 @@ import priorityLow from '../Assets/Images/icons8-low-priority-64.png';
 import user1 from '../Assets/Images/arupi.jpg';
 import user2 from '../Assets/Images/charlie.jpg';
 import user3 from '../Assets/Images/segs.jpg';
+import { useNavigate } from "react-router-dom";
 /**
  * DisplayCards Component
  * 
@@ -29,9 +30,10 @@ export default function DisplayCards({ labelIcon, taskPic }){
     const data = useContext(CardContext);
     const {item, pos} = data
     const {title, label, time, day, bgColor, priority, assignee} = item
-
+    //Navigate function
+    const navigate = useNavigate();
     return(
-        <div className="w-full md:h-[250px] h-[230px] flex flex-col justify-start items-start p-5 cursor-pointer relative gridItems transition-all duration-700 hover:top-[-5px]" style={{backgroundColor: bgColor}} onClick={()=> console.log(item, pos)}>
+        <div className="w-full md:h-[250px] h-[230px] flex flex-col justify-start items-start p-5 cursor-pointer relative gridItems transition-all duration-700 hover:top-[-5px]" style={{backgroundColor: bgColor}} onClick={()=> navigate(`details/${label}${pos}`, {state: item})}>
             <img 
                 src={changeLabel(priority)} 
                 alt="label" 

@@ -56,7 +56,8 @@ export const createAction = async ({ request }) => {
     desc: taskActionData.get('description'),
     time: getTime(),
     day: getDay(),
-    bgColor: colors[Math.floor(Math.random() * colors.length)]
+    bgColor: colors[Math.floor(Math.random() * colors.length)],
+    isProgress: false
   };
   // Throw an error if any field is empty
   const {title, assignee, desc, label, priority} = details

@@ -13,16 +13,16 @@ export default function Home(){
     const displayArr = getStorage ? JSON.parse(getStorage) : []
 
     const filterCard = displayArr.filter(item=> {
-        return isFilter === 'bug' ? item.label === 'Bug' : isFilter === 'doc' ? item.label === 'Docs' : isFilter === 'feat' ? item.label === 'Feature' : item 
+        return isFilter === true ? item.isProgress === true : isFilter === false ? item.isProgress === false : item
     })
     
     return(
         <div className="sm:px-6 px-3 py-1">
-            <FilterContext.Provider value={{isFilter, setIsFilter}}>
+            <FilterContext.Provider value={{isFilter, setIsFilter, filterCard, displayArr}}>
                 <FilterBtn />
             </FilterContext.Provider>
             {filterCard.length === 0 ?  <NoTask /> : 
-                <section className="grid grid-cols-gridFluid mt-1 gap-5">
+                <section className="grid grid-cols-gridFluid my-4 gap-5">
                     {filterCard.map((item, pos)=> {
                         return(
                             <CardContext.Provider value={{item, pos}} key={item.id}>
