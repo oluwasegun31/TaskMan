@@ -1,13 +1,258 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Supreme Fonts */
+@font-face {
+    font-family: 'Supreme-Variable';
+    src: url('./Assets/Supreme/Supreme-Variable.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Variable.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Variable.ttf') format('truetype');
+         font-weight: 100 800;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-VariableItalic';
+    src: url('./Assets/Supreme/Supreme-VariableItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-VariableItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-VariableItalic.ttf') format('truetype');
+         font-weight: 100 800;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Thin';
+    src: url('./Assets/Supreme/Supreme-Thin.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Thin.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Thin.ttf') format('truetype');
+         font-weight: 100;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-ThinItalic';
+    src: url('./Assets/Supreme/Supreme-ThinItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-ThinItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-ThinItalic.ttf') format('truetype');
+         font-weight: 100;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Extralight';
+    src: url('./Assets/Supreme/Supreme-Extralight.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Extralight.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Extralight.ttf') format('truetype');
+         font-weight: 200;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-ExtralightItalic';
+    src: url('./Assets/Supreme/Supreme-ExtralightItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-ExtralightItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-ExtralightItalic.ttf') format('truetype');
+         font-weight: 200;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Light';
+    src: url('./Assets/Supreme/Supreme-Light.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Light.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-LightItalic';
+    src: url('./Assets/Supreme/Supreme-LightItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-LightItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-LightItalic.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Regular';
+    src: url('./Assets/Supreme/Supreme-Regular.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Regular.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-Italic';
+    src: url('./Assets/Supreme/Supreme-Italic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Italic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Italic.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Medium';
+    src: url('./Assets/Supreme/Supreme-Medium.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Medium.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-MediumItalic';
+    src: url('./Assets/Supreme/Supreme-MediumItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-MediumItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-MediumItalic.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Bold';
+    src: url('./Assets/Supreme/Supreme-Bold.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Bold.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-BoldItalic';
+    src: url('./Assets/Supreme/Supreme-BoldItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-BoldItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-BoldItalic.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Supreme-Extrabold';
+    src: url('./Assets/Supreme/Supreme-Extrabold.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-Extrabold.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-Extrabold.ttf') format('truetype');
+         font-weight: 800;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Supreme-ExtraboldItalic';
+    src: url('./Assets/Supreme/Supreme-ExtraboldItalic.woff2') format('woff2'),
+         url('./Assets/Supreme/Supreme-ExtraboldItalic.woff') format('woff'),
+         url('./Assets/Supreme/Supreme-ExtraboldItalic.ttf') format('truetype');
+         font-weight: 800;
+         font-display: swap;
+         font-style: italic;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Erode Fonts */
+@font-face {
+    font-family: 'Erode-Variable';
+    src: url('./Assets/Erode/Erode-Variable.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Variable.woff') format('woff'),
+         url('./Assets/Erode/Erode-Variable.ttf') format('truetype');
+         font-weight: 300 700;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-VariableItalic';
+    src: url('./Assets/Erode/Erode-VariableItalic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-VariableItalic.woff') format('woff'),
+         url('./Assets/Erode/Erode-VariableItalic.ttf') format('truetype');
+         font-weight: 300 700;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Erode-Light';
+    src: url('./Assets/Erode/Erode-Light.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Light.woff') format('woff'),
+         url('./Assets/Erode/Erode-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-LightItalic';
+    src: url('./Assets/Erode/Erode-LightItalic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-LightItalic.woff') format('woff'),
+         url('./Assets/Erode/Erode-LightItalic.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Erode-Regular';
+    src: url('./Assets/Erode/Erode-Regular.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Regular.woff') format('woff'),
+         url('./Assets/Erode/Erode-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-Italic';
+    src: url('./Assets/Erode/Erode-Italic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Italic.woff') format('woff'),
+         url('./Assets/Erode/Erode-Italic.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Erode-Medium';
+    src: url('./Assets/Erode/Erode-Medium.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Medium.woff') format('woff'),
+         url('./Assets/Erode/Erode-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-MediumItalic';
+    src: url('./Assets/Erode/Erode-MediumItalic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-MediumItalic.woff') format('woff'),
+         url('./Assets/Erode/Erode-MediumItalic.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Erode-Semibold';
+    src: url('./Assets/Erode/Erode-Semibold.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Semibold.woff') format('woff'),
+         url('./Assets/Erode/Erode-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-SemiboldItalic';
+    src: url('./Assets/Erode/Erode-SemiboldItalic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-SemiboldItalic.woff') format('woff'),
+         url('./Assets/Erode/Erode-SemiboldItalic.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'Erode-Bold';
+    src: url('./Assets/Erode/Erode-Bold.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-Bold.woff') format('woff'),
+         url('./Assets/Erode/Erode-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Erode-BoldItalic';
+    src: url('./Assets/Erode/Erode-BoldItalic.woff2') format('woff2'),
+         url('./Assets/Erode/Erode-BoldItalic.woff') format('woff'),
+         url('./Assets/Erode/Erode-BoldItalic.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: italic;
 }
