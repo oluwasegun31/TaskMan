@@ -17,3 +17,14 @@ body::-webkit-scrollbar-thumb {background-color: rgb(15, 23, 42)}
     border: 2px solid rgb(15, 23, 42);
     z-index: -1;
 }
+.modalAni{
+    animation: growAnimation 0.5s ease forwards;
+}
+@keyframes growAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

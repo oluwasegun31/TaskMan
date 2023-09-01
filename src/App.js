@@ -19,7 +19,7 @@ function App() {
         />
 
         <Route
-          path='details/:labelpos'
+          path='details/:pos'
           element={<TaskDetails />}
         />
       </Route>

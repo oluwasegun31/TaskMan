@@ -21,11 +21,11 @@ export default function FilterBtn(){
                     onClick={()=> setIsFilter('all')}
                 >All</button>
                 <button 
-                    className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === 'bug' ? activeStyle() : ''}`}
+                    className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === true ? activeStyle() : ''}`}
                     onClick={()=> setIsFilter(true)}
                 >Open</button>
                 <button 
-                    className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === 'doc' ? activeStyle() : ''}`} 
+                    className={`outline-none hover:font-SupremeBold p-1 rounded-none ${isFilter === false ? activeStyle() : ''}`} 
                     onClick={()=> setIsFilter(false)}
                 >Closed</button>
         </section>

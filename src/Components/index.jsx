@@ -5,5 +5,7 @@ import NoTask from "./NoTask";
 import DisplayCards from "./DisplayCards";
 import FilterBtn from "./FilterBtn";
 import DetailsCard from "./DetailsCard";
+import DetailNav from "./DetailNav";
+import DeleteModal from "./DeleteModal";
 
-export {createAction, FormError, FormInput, NoTask, DisplayCards, FilterBtn, DetailsCard}
+export {createAction, FormError, FormInput, NoTask, DisplayCards, FilterBtn, DetailsCard, DetailNav, DeleteModal}

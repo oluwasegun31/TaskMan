@@ -9,23 +9,35 @@ import user2Icon from '../Assets/Images/charlie.jpg';
 import user3Icon from '../Assets/Images/segs.jpg';
 import { useContext } from 'react';
 import { DetailContext } from '../Hooks';
-
+/**
+ * Details Card Component
+ * 
+ * This component displays detailed information about a task, including its title, status, label, priority, assignee, time, day, and description.
+*/
 
 export default function DetailsCard(){
-    const detailData = useContext(DetailContext)
-    const {title, isProgress, label, priority, assignee, time, day, desc} = detailData;
+    //Retrive the data from the context hook
+    const detailData = useContext(DetailContext);
+    const {taskDetails, isComplete} = detailData
+    const {title, label, priority, assignee, time, day, desc} = taskDetails;
+    // Function to display task progress status.
     const checkIsProgress = (bol)=> {
         return bol ? 'In Progress...' : 'Completed..' 
     }
+    // Function to apply styling based on progress status
     const isProgressStyle = (bol)=> {
         return bol ?  'bg-yellow-100 text-yellow-700' : 'bg-green-300 text-green-900'
     }
+    // Function to determine the CSS class for the priority.
     const checkPriority = (str)=> {
         return str === 'high' ? 'bg-red-200 text-red-800' : str === 'medium' ? 'bg-orange-200 text-orange-800' : 'bg-blue-200 text-blue-800'
     }
+    // Function to determine the user icon.
     const checkUser = (str)=> {
         return str === 'oluwasegun' ? user3Icon : str === 'arupi' ? user1Icon : user2Icon
     }
+
+    
     return(
         <section>
             <h2 className="font-SupremeBold md:text-[3rem] text-3xl leading-[1]">{title}</h2>
@@ -38,7 +50,7 @@ export default function DetailsCard(){
                     />
                     <p className="sm:text-lg text-base font-SupremeRegular text-slate-500">Status:</p>
                 </div>
-                <p className={`sm:px-4 px-2 py-[2px] rounded-full sm:text-base text-sm font-SupremeMedium ${isProgressStyle(isProgress)}`}>{checkIsProgress(isProgress)}</p>
+                <p className={`sm:px-4 px-2 py-[2px] rounded-full sm:text-base text-sm font-SupremeMedium ${isProgressStyle(isComplete)} transition-all duration-1000`}>{checkIsProgress(isComplete)}</p>
             </div>
             <div className="flex justify-start items-center mt-4">
                 <div className="flex justify-start items-center sm:mr-14 mr-8">
@@ -82,7 +94,14 @@ export default function DetailsCard(){
                     />
                     <p className="sm:text-lg text-base font-SupremeRegular text-slate-500">Assignee:</p>
                 </div>
-                <img src={checkUser(assignee)} alt="user"  className="sm:w-10 w-7 sm:h-10 h-7 object-cover rounded-full"/>
+                <div className='flex justify-start items-center'>
+                    <img 
+                        src={checkUser(assignee)} 
+                        alt="user"  
+                        className="sm:w-10 w-7 sm:h-10 h-7 object-cover rounded-full mr-2"
+                    />
+                    <p className='sm:text-lg text-base font-SupremeMedium'>{assignee}</p>
+                </div>
             </div>
             <div className="mt-3 flex flex-col justify-start items-start">
                 <div className="flex justify-start items-center border-b border-b-slate-300 w-full pb-3 mb-3">

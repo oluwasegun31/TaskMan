@@ -1,6 +1,6 @@
 # Task-Man: Task Management App
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](./src/Assets/Images/Screenshot%20(463).png)
 
 Task-Man is a React-based Task Management App that allows users to organize their tasks and to-do lists efficiently.
 
@@ -14,8 +14,6 @@ Task-Man is a React-based Task Management App that allows users to organize thei
 - [Technologies Used](#technologies-used)
 - [Fonts Used](#fonts-used)
 - [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 Task-Man is designed to help users keep track of tasks and prioritize their work. The app provides an intuitive interface to manage tasks easily.
 
@@ -50,6 +48,3 @@ Task-Man is designed to help users keep track of tasks and prioritize their work
 - [Erode](https://www.fontshare.com/fonts/erode)
 ## Contributing
 Contributions are welcome! If you have ideas for additional features or improvements, please feel free to open an issue or submit a pull request.
-
-## License
-This project is licensed under the [MIT License](LICENSE).

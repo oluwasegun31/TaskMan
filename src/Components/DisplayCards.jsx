@@ -33,7 +33,7 @@ export default function DisplayCards({ labelIcon, taskPic }){
     //Navigate function
     const navigate = useNavigate();
     return(
-        <div className="w-full md:h-[250px] h-[230px] flex flex-col justify-start items-start p-5 cursor-pointer relative gridItems transition-all duration-700 hover:top-[-5px]" style={{backgroundColor: bgColor}} onClick={()=> navigate(`details/${label}${pos}`, {state: item})}>
+        <div className="w-full md:h-[250px] h-[230px] flex flex-col justify-start items-start p-5 cursor-pointer relative gridItems transition-all duration-700 hover:top-[-5px]" style={{backgroundColor: bgColor}} onClick={()=> navigate(`details/${pos}`, {state: item})}>
             <img 
                 src={changeLabel(priority)} 
                 alt="label" 
