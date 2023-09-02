@@ -1,6 +1,6 @@
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { DeleteModal, DetailNav, DetailsCard } from "../Components";
-import { DetailContext } from "../Hooks";
+import { DetailContext, DetailNavContext } from "../Hooks";
 import { useState } from "react";
 
 /**
@@ -49,7 +49,9 @@ export default function TaskDetails(){
 
     return(
         <section className="w-full mt-3 md:px-6 px-2 relative">
-            <DetailNav onClick={()=> setIsDelete(val => !val)}/>
+            <DetailNavContext.Provider value={{setIsDelete, storageArr}}>
+                <DetailNav />
+            </DetailNavContext.Provider>
             <DetailContext.Provider value={{taskDetails, isComplete}}>
                 <DetailsCard />
             </DetailContext.Provider>

@@ -1,8 +1,8 @@
 import './App.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { RootLayout } from './Layouts';
-import { CreateTask, Home, TaskDetails } from './Pages';
-import { createAction } from './Components';
+import { CreateTask, EditTask, Home, TaskDetails } from './Pages';
+import { createAction} from './Components';
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -18,10 +18,17 @@ function App() {
           action={createAction}
         />
 
-        <Route
-          path='details/:pos'
-          element={<TaskDetails />}
-        />
+        <Route path='details'>
+          <Route
+            path=':pos'
+            element={<TaskDetails />}
+          />
+
+          <Route
+            path=':pos/edit'
+            element={<EditTask />}
+          />
+        </Route>
       </Route>
     )
   )

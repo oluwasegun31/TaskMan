@@ -2,9 +2,13 @@ import writeIcon from '../Assets/Images/icons8-pen-50.png';
 import deleteIcon from '../Assets/Images/icons8-delete-50.png';
 import backIcon from '../Assets/Images/icons8-arrow-50.png';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { DetailNavContext } from '../Hooks';
 
-export default function DetailNav({onClick}){
+export default function DetailNav({editClick}){
     const navigate = useNavigate()
+    const navData = useContext(DetailNavContext);
+    const {setIsDelete, storageArr} = navData;
     
     return(
         <div className="flex justify-between items-center mb-3">
@@ -21,12 +25,13 @@ export default function DetailNav({onClick}){
                     src={writeIcon} 
                     alt="write" 
                     className="sm:w-10 w-7 sm:h-10 h-7 object-cover cursor-pointer mr-4"
+                    onClick={()=> navigate('edit', {state: storageArr})}
                 />
                 <img 
                     src={deleteIcon} 
                     alt="delete" 
                     className="sm:w-10 w-7 sm:h-10 h-7 object-cover cursor-pointer"
-                    onClick={onClick}
+                    onClick={()=> setIsDelete(val => !val)}
                 />
             </div>
         </div>
