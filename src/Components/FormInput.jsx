@@ -93,7 +93,7 @@ export function FormInput(){
                 <p>Task Description:</p>
             </label>
             <textarea name="description"
-                className="resize-none w-full h-[300px] p-3 font-SupremeRegular sm:text-[22px] text-[16px] leading-[1] outline-none mb-7 bg-transparent border-l border-l-slate-400 border-b border-b-slate-700 rounded-none focus:border-l-slate-900"
+                className="resize-none w-full h-[300px] p-3 font-SupremeRegular sm:text-[22px] text-[16px] leading-[1] outline-none mb-7 bg-transparent border-l-2 border-l-slate-400 border-b-2 border-b-slate-700 rounded-none focus:border-l-slate-900"
             >
             </textarea>
         </div>
