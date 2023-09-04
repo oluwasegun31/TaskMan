@@ -16,7 +16,7 @@ export function FormInput(){
                 type="text" 
                 name="title"
                 placeholder="Task Title"
-                className="w-full outline-none px-1 py-0 font-SupremeBold text-[2rem] text-slate-900 bg-inherit focus:border-b focus:border-b-slate-500 mb-4"
+                className="w-full outline-none px-1 py-0 font-SupremeBold sm:text-[2rem] text-[1.5rem] text-slate-900 bg-inherit focus:border-b focus:border-b-slate-500 mb-4"
                 maxLength={20}
         />
         {/* Task Label */}
