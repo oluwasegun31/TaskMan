@@ -22,13 +22,13 @@ export default function RootLayout(){
                         />
                         <p className='sm:block hidden'>TaskyMan</p>
                     </div>
-                    <div className='text-[1.3rem] font-ErodeMedium'>
+                    <div>
                         <button
                             className='outline-0 bg-slate-600 px-2 py-1 text-white rounded-none flex justify-center items-center hover:bg-slate-500 hover:text-slate-100 transition-colors'
                             onClick={()=> navigate('create')}
                         >
-                            <img src={plusSign} alt="plus" className='w-5 h-5 object-cover mr-3'/>
-                            New Task
+                            <img src={plusSign} alt="plus" className='sm:w-5 w-4 sm:h-5 h-4 object-cover mr-3'/>
+                            <p className='sm:text-[1.3rem] text-lg font-ErodeMedium'>New Task</p>
                         </button>
                     </div>
                 </nav>
