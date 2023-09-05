@@ -37,7 +37,7 @@ export function FormInput(){
                 <option value="" className='bg-slate-500 text-white text-lg'>Select Label</option>
                 <option value="Bug" className='bg-slate-500 text-white text-lg'>Bug</option>
                 <option value="Docs" className='bg-slate-500 text-white text-lg'>Docs</option>
-                <option value="Feature" className='bg-slate-500 text-white text-lg'>Feature</option>
+                <option value="Feature" className='bg-slate-500 text-white text-lg'>lorem20</option>
             </select>
         </div>
         {/* Task Priority */}

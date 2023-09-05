@@ -4,7 +4,7 @@
 
 Task-Man is a React-based Task Management App that allows users to organize their tasks and to-do lists efficiently.
 
-**Live Demo:** [View Live Demo](https://your-live-demo-link.com)
+**Live Demo:** [View Live Demo](https://task-man-silk.vercel.app/)
 
 ## Table of Contents
 - [Introduction](#introduction)

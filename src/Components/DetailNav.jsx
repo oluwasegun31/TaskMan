@@ -4,9 +4,16 @@ import backIcon from '../Assets/Images/icons8-arrow-50.png';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { DetailNavContext } from '../Hooks';
-
+/**
+ * DetailNav Component
+ * 
+ * This component renders the navigation bar in the task details view.
+ * It includes buttons for navigating back, editing, and deleting a task.
+ * The component relies on React Router and context to handle navigation and deletion.
+*/
 export default function DetailNav({editClick}){
     const navigate = useNavigate()
+    // Get data from the DetailNavContext using useContext
     const navData = useContext(DetailNavContext);
     const {setIsDelete, storageArr} = navData;
     

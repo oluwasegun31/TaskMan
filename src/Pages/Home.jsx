@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 import { DisplayCards, NoTask, FilterBtn } from "../Components";
 import {FilterContext, CardContext} from "../Hooks";
-
+/**
+ * Home Component Page
+ * 
+ * This component represents the home page of the application. It displays a list of tasks and provides filtering options. The component manages tasks, filtering, and uses context for state management.
+*/
 export default function Home(){
+    // Initialize state for tasks and filtering
     const [myArr] = useState(localStorage.getItem('Tasks') || [])
     const [isFilter, setIsFilter] = useState('all')
+    // Update local storage when tasks change
     useEffect(()=> {
         localStorage.setItem('Tasks', myArr)
     }, [myArr])
-
+    // Retrieve tasks from local storage
     const getStorage = localStorage.getItem('Tasks')
     const displayArr = getStorage ? JSON.parse(getStorage) : []
-
+    // Filter tasks based on the selected filter
     const filterCard = displayArr.filter(item=> {
         return isFilter === true ? item.isProgress === true : isFilter === false ? item.isProgress === false : item
     })

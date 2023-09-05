@@ -4,7 +4,15 @@ import maleIcon from '../Assets/Images/icons8-male-50.png';
 import descIcon from '../Assets/Images/icons8-handle-with-care-48.png';
 import { useContext } from 'react';
 import { EditContext } from '../Hooks';
+/**
+ * EditInput Component
+ * 
+ * This component renders the input fields and options for editing a task.
+ * It includes fields for task title, label, priority, assignee, and description.
+ * Users can update task details through this component.
+*/
 export default function EditInput(){
+    // Get editData and required functions from EditContext using useContext
     const editData = useContext(EditContext)
     const {data, setIsData, updateTask} = editData
     return(
